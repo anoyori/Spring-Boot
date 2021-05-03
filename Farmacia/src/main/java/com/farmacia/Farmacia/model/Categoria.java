@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
@@ -40,6 +41,13 @@ public class Categoria {
 
 	public void setDepartamento(String departamento) {
 		this.departamento = departamento;
+	}
+	
+	public List<Produto> getProduto() {
+		return produto;
+	}
+	public void setProduto(List<Produto> produto) {
+		this.produto = produto;
 	}
 
 }
